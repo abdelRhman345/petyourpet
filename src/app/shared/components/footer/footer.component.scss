@@ -1,0 +1,137 @@
+@import "../../../../styles/colors";
+
+.footer {
+  background: $colorPrimary;
+  padding: 50px 0;
+  .navbar-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    @media (max-width: 575.98px) {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+    // `md` applies to small devices (landscape phones, less than 768px)
+    @media (max-width: 767.98px) {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+    // `lg` applies to medium devices (tablets, less than 992px)
+    @media (max-width: 991.98px) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(100px, 1fr));
+    }
+    .navbar-brand-footer {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      margin: 15px 10px;
+    }
+    .navbar-collapse-footer {
+      .navbar-nav {
+        @media (max-width: 575.98px) {
+          display: flex;
+          flex-direction: column;
+        }
+        // `md` applies to small devices (landscape phones, less than 768px)
+        @media (max-width: 767.98px) {
+          display: flex;
+          flex-direction: column;
+        }
+        // `lg` applies to medium devices (tablets, less than 992px)
+        @media (max-width: 991.98px) {
+          display: flex;
+          flex-direction: column;
+        }
+        .nav-item {
+          .nav-link {
+            font-family: "Baloo Chettan 2", cursive;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 17px;
+            padding: 14px 20px;
+            transition: all 0.4s;
+            @media (max-width: 575.98px) {
+              font-size: 14px;
+              padding: 10px;
+            }
+            // `md` applies to small devices (landscape phones, less than 768px)
+            @media (max-width: 767.98px) {
+              font-size: 14px;
+              padding: 10px;
+            }
+            // `lg` applies to medium devices (tablets, less than 992px)
+            @media (max-width: 991.98px) {
+              font-size: 16px;
+              padding: 10px;
+            }
+            // `xl` applies to large devices (desktops, less than 1200px)
+            @media (max-width: 1199.98px) {
+              font-size: 16px;
+              padding: 10px;
+            }
+            &:hover {
+              color: $textColor;
+            }
+          }
+        }
+      }
+    }
+    .follow-us {
+      .navbar-footer {
+        .navbar-nav {
+          @media (max-width: 575.98px) {
+            flex-direction: row;
+          }
+          // `md` applies to small devices (landscape phones, less than 768px)
+          @media (max-width: 767.98px) {
+            flex-direction: row;
+          }
+          // `lg` applies to medium devices (tablets, less than 992px)
+          @media (max-width: 991.98px) {
+            flex-direction: row;
+          }
+        }
+        .nav-item {
+          .nav-link {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            line-height: 20px;
+            margin: 0 5px;
+            border-radius: 50%;
+            border-right: none;
+            text-align: center;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.5s;
+            position: relative;
+            &:hover {
+              top: -5px;
+            }
+          }
+          &:nth-child(1) {
+            a {
+              background-color: #3b5999;
+            }
+          }
+          &:nth-child(2) {
+            a {
+              background-color: #55acee;
+            }
+          }
+          &:nth-child(3) {
+            a {
+              background-color: #e4405f;
+            }
+          }
+        }
+      }
+    }
+  }
+}

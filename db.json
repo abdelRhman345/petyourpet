@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "username": "Abdelrahman",
+      "email": "abdelrahman25797@gmail.com",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 1
+    }
+  ],
+  "login": [
+    {
+      "username": "Abdelrahman",
+      "type": "users",
+      "id": 1
+    }
+  ],
+  "message": [
+    {}
+  ]
+}

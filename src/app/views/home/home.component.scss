@@ -1,0 +1,148 @@
+@import "../../../styles/colors";
+
+.inner-wrapper {
+  padding: 7rem;
+  padding-bottom: 0;
+  margin: 6rem 0;
+  background-color: $textColor;
+  border-radius: 50px;
+  overflow: hidden;
+  @media (max-width: 575.98px) {
+    padding: 5rem;
+    padding-bottom: 0;
+    margin: 4rem 0;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    padding: 5rem;
+    padding-bottom: 0;
+    margin: 4rem 0;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    padding: 6rem;
+    padding-bottom: 0;
+    margin: 5rem 0;
+  }
+  .inner-info {
+    text-align: center;
+    .inner-head {
+      font-family: "Baloo Chettan 2", cursive;
+      font-weight: bold;
+      font-size: 6rem;
+      color: $white;
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+      @media (max-width: 575.98px) {
+        font-size: 3rem;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        font-size: 3rem;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        font-size: 4rem;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        font-size: 5rem;
+      }
+      @media (min-width: 1200px) {
+      }
+    }
+    .inner-text {
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 4.5rem;
+      margin-top: 2.5rem;
+      color: $white;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      @media (max-width: 575.98px) {
+        font-size: 0.9rem;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        font-size: 0.9rem;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        font-size: 0.9rem;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        font-size: 1rem;
+      }
+    }
+  }
+  .inner-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    transform: translateY(190px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+  }
+}
+
+// /
+.our-clients {
+  margin: 6rem 0;
+  padding-top: 7rem;
+  @media (max-width: 575.98px) {
+    padding: 4rem 0;
+    margin: 4rem 0 0;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    padding: 4rem 0;
+    margin: 4rem 0 0;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    padding: 5rem 0;
+    margin: 5rem 0 0;
+  }
+  .our-clients-img {
+    overflow: hidden;
+    border-radius: 50px;
+    transform: translateX(180px);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+  }
+  .our-clients-info {
+    padding: 40px 20px;
+    .our-clients-head {
+      font-family: "Baloo Chettan 2", cursive;
+      font-weight: bold;
+      font-size: 3.5rem;
+      color: $colorSecondary;
+      transform: translateX(-180px);
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+      span {
+        font-size: 1.2rem;
+        padding: 5px;
+        color: $textColor;
+      }
+      @media (max-width: 575.98px) {
+        font-size: 2.8rem;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        font-size: 3rem;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        font-size: 3.2rem;
+      }
+    }
+    .our-clients-text {
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 4.5rem;
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      line-height: 1.67;
+      color: $colorPrimary;
+      @media (max-width: 575.98px) {
+        font-size: 0.8rem;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        font-size: 0.9rem;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

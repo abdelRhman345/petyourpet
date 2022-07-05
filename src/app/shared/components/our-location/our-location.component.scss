@@ -1,0 +1,55 @@
+@import "../../../../styles/colors";
+
+.our-location {
+  padding: 7rem 0;
+  .our-location-info {
+    text-align: center;
+    .our-location-head {
+      font-family: "Baloo Chettan 2", cursive;
+      font-weight: bold;
+      font-size: 3rem;
+      color: $colorSecondary;
+      // `sm` applies to x-small devices (portrait phones, less than 576px)
+      @media (max-width: 575.98px) {
+        font-size: 2.4rem;
+      }
+
+      // `md` applies to small devices (landscape phones, less than 768px)
+      @media (max-width: 767.98px) {
+        font-size: 2.6rem;
+      }
+
+      // `lg` applies to medium devices (tablets, less than 992px)
+      @media (max-width: 991.98px) {
+        font-size: 2.8rem;
+      }
+    }
+    .our-location-text {
+      font-family: "Montserrat", sans-serif;
+      margin-bottom: 4.5rem;
+      margin-top: 2.5rem;
+      color: $colorPrimary;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      // `sm` applies to x-small devices (portrait phones, less than 576px)
+      @media (max-width: 575.98px) {
+        font-size: 0.9rem;
+      }
+
+      // `md` applies to small devices (landscape phones, less than 768px)
+      @media (max-width: 767.98px) {
+        font-size: 0.9rem;
+      }
+
+      // `lg` applies to medium devices (tablets, less than 992px)
+      @media (max-width: 991.98px) {
+        font-size: 1rem;
+      }
+    }
+  }
+  .location {
+    iframe {
+      border-radius: 50px;
+    }
+  }
+}

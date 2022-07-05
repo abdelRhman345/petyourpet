@@ -1,0 +1,142 @@
+@import "../../../../styles/colors";
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  position: relative;
+  box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.6) inset;
+  overflow: hidden;
+
+  .slide {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    &-bg {
+      position: relative;
+      display: flex;
+      flex: 1 1 auto;
+      &:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: "";
+        background-image: linear-gradient(
+          90deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(0, 0, 0, 1) 11%,
+          rgba(255, 255, 255, 0) 100%
+        );
+      }
+      &-image {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-pane {
+      position: absolute;
+      width: 45%;
+      top: 10rem;
+      left: 5rem;
+      overflow: hidden;
+      border-radius: 30px;
+      padding: 50px;
+      background-color: $textColor;
+      // `sm` applies to x-small devices (portrait phones, less than 576px)
+      @media (max-width: 575.98px) {
+        width: 100%;
+        top: 3rem;
+        left: 1rem;
+        background-color: transparent;
+      }
+
+      // `md` applies to small devices (landscape phones, less than 768px)
+      @media (max-width: 767.98px) {
+        width: 100%;
+        top: 4rem;
+        left: 1rem;
+        background-color: transparent;
+      }
+
+      // `lg` applies to medium devices (tablets, less than 992px)
+      @media (max-width: 991.98px) {
+        width: 80%;
+        top: 4rem;
+        left: 3rem;
+      }
+
+      // `xl` applies to large devices (desktops, less than 1200px)
+      @media (max-width: 1199.98px) {
+        width: 60%;
+        top: 9rem;
+        left: 4rem;
+      }
+
+      .name {
+        font-family: "Baloo Chettan 2", cursive;
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 1.1;
+        color: $white;
+        transition: all 6s cubic-bezier(0.645, 0.27, 0.02, 0.965);
+        // `sm` applies to x-small devices (portrait phones, less than 576px)
+        @media (max-width: 575.98px) {
+          font-size: 2rem;
+        }
+
+        // `md` applies to small devices (landscape phones, less than 768px)
+        @media (max-width: 767.98px) {
+          font-size: 2.2rem;
+        }
+
+        // `lg` applies to medium devices (tablets, less than 992px)
+        @media (max-width: 991.98px) {
+          font-size: 2.4rem;
+        }
+
+        // `xl` applies to large devices (desktops, less than 1200px)
+        @media (max-width: 1199.98px) {
+          font-size: 2.6rem;
+        }
+      }
+      .desc {
+        font-family: "Montserrat", sans-serif;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.5em;
+        color: $white;
+        font-size: 1.1rem;
+        line-height: 1.67;
+        letter-spacing: 0.5px;
+        transition: all 4s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+        // `sm` applies to x-small devices (portrait phones, less than 576px)
+        @media (max-width: 575.98px) {
+          font-size: 0.9rem;
+        }
+
+        // `md` applies to small devices (landscape phones, less than 768px)
+        @media (max-width: 767.98px) {
+          font-size: 0.9rem;
+        }
+
+        // `lg` applies to medium devices (tablets, less than 992px)
+        @media (max-width: 991.98px) {
+          font-size: 0.9rem;
+        }
+
+        // `xl` applies to large devices (desktops, less than 1200px)
+        @media (max-width: 1199.98px) {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}

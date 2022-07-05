@@ -1,0 +1,270 @@
+@import "../../../../styles/colors";
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $white;
+  width: 100%;
+  height: 100px;
+  margin-bottom: 0 !important;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  &-brand {
+    width: 60px;
+    height: 60px;
+    mix-blend-mode: multiply;
+    margin: 15px 10px;
+  }
+  .brand {
+    overflow: hidden;
+    h2 {
+      transform: translateY(180px);
+      opacity: 0;
+      transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+      font-family: "Montserrat", sans-serif;
+      font-weight: bold;
+      font-size: 1.4rem;
+      color: $colorSecondary;
+      line-height: 1.1;
+      text-align: center;
+      margin: 0;
+      text-transform: uppercase;
+
+      // `sm` applies to x-small devices (portrait phones, less than 576px)
+      @media (max-width: 575.98px) {
+        font-size: 1rem;
+      }
+
+      // `md` applies to small devices (landscape phones, less than 768px)
+      @media (max-width: 767.98px) {
+        font-size: 1.1rem;
+      }
+
+      // `lg` applies to medium devices (tablets, less than 992px)
+      @media (max-width: 991.98px) {
+        font-size: 1.2rem;
+      }
+
+      // `xl` applies to large devices (desktops, less than 1200px)
+      @media (max-width: 1199.98px) {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  &-collapse {
+    z-index: 99;
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border-radius: 50px 0 0 50%;
+    transform: translateX(200px);
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .navbar-icon {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      left: 20px;
+      top: 30px;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.7s cubic-bezier(0.9, 0, 0.33, 1);
+      border: none;
+      background-color: transparent;
+      span {
+        display: block;
+        padding: 0;
+        width: 30px;
+        height: 1px;
+        background: $colorPrimary;
+        margin: 5px 0;
+        transition: all 0.7s cubic-bezier(0.9, 0, 0.33, 1);
+      }
+      :nth-child(1) {
+        width: 30px;
+        transform: rotate(0) translateY(0);
+      }
+      :nth-child(2) {
+        width: 28px;
+        transform: translateX(0);
+      }
+      :nth-child(3) {
+        width: 20px;
+        transform: rotate(0) translateY(0);
+      }
+    }
+    .navbar-nav {
+      width: 100%;
+      transform: translateX(100px);
+      opacity: 0;
+      transition: all 0.9s cubic-bezier(0.9, 0, 0.33, 1);
+      .nav-item {
+        font-family: "Baloo Chettan 2", cursive;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: 0.5s linear;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        .nav-link {
+          display: inline;
+          color: $colorPrimary;
+          transition: all 0.4s cubic-bezier(0.9, 0, 0.33, 1);
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          top: 100%;
+          right: 100%;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($textColor, 0.1);
+          z-index: -1;
+          opacity: 0;
+          transition: 0.5s;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          top: -100%;
+          left: 100%;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($textColor, 0.1);
+          opacity: 0;
+          z-index: -1;
+          transition: 0.5s;
+        }
+        &:hover {
+          .nav-link {
+            color: $white;
+          }
+          &:before {
+            top: 0%;
+            right: 0%;
+            opacity: 1;
+            background-color: $textColor;
+          }
+          &:after {
+            top: 0%;
+            left: 0%;
+            opacity: 1;
+            background-color: $textColor;
+          }
+        }
+      }
+
+      .register {
+        border-top: 1px solid rgba($colorPrimary, 0.25);
+        padding: 2rem 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 70%;
+        margin: 3rem auto;
+        .nav-item {
+          padding: 0 20px;
+          &:nth-child(1) {
+            background-color: $textColor;
+            .nav-link {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .follow-us {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    .navbar-footer {
+      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      .nav-item {
+        display: inline-block;
+        .nav-link {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px;
+          height: 40px;
+          line-height: 20px;
+          margin: 0 5px;
+          border-radius: 50%;
+          color: $white;
+          font-weight: bold;
+          transition: 0.4s;
+          cursor: pointer;
+          &:hover {
+            top: -5px;
+          }
+        }
+        &:nth-child(1) {
+          a {
+            background-color: #3b5999;
+          }
+        }
+        &:nth-child(2) {
+          a {
+            background-color: #55acee;
+          }
+        }
+        &:nth-child(3) {
+          a {
+            background-color: #e4405f;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Add Classes when a click Button Menu
+.menu-open {
+  transform: translateX(0px);
+  border-radius: 0;
+  background-color: $white;
+  box-shadow: rgba($colorPrimary, 0.5) 0px 0.0625em 0.0625em,
+    rgba($colorPrimary, 0.25) 0px 0.125em 0.5em;
+  .navbar-nav {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.navbar-icon.move span:nth-child(1) {
+  width: 30px;
+  transform: rotate(45deg) translateY(9px) !important;
+  background: rgba($colorPrimary, 0.6);
+}
+
+.navbar-icon.move span:nth-child(2) {
+  width: 28px;
+  transform: translate(30px);
+  opacity: 0;
+}
+
+.navbar-icon.move span:nth-child(3) {
+  width: 30px !important;
+  transform: rotate(-45deg) translateY(-9px) !important;
+  background: rgba($colorPrimary, 0.6);
+}

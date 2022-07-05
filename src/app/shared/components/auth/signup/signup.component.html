@@ -1,0 +1,128 @@
+<form [formGroup]="userForm" class="container" method="POST">
+  <h1 class="h3 mb-3 fw-normal form-title">Please sign up</h1>
+
+  <div class="form-input">
+    <div class="form-floating my-2">
+      <label for="fristInput">Full Name</label>
+      <input
+        class="form-control"
+        id="fristInput"
+        formControlName="username"
+        placeholder="Full Name"
+        [ngClass]="{ 'is-invalid ': submitted && f['username'].errors }"
+      />
+
+      <div
+        *ngIf="
+          submitted &&
+          f['username'].errors &&
+          (f['username'].dirty || f['username'].touched)
+        "
+        class="invaild-feedback"
+      >
+        <div *ngIf="f['username'].errors?.['required']" class="text-danger">
+          Full Name Is Required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-floating my-2">
+      <label for="floatingInput">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        formControlName="email"
+        placeholder="name@example.com"
+        [ngClass]="{ 'is-invalid ': submitted && f['email'].errors }"
+      />
+
+      <div
+        *ngIf="
+          submitted &&
+          f['email'].errors &&
+          (f['email'].dirty || f['email'].touched)
+        "
+        class="invaild-feedback"
+      >
+        <div *ngIf="f['email'].errors?.['required']" class="text-danger">
+          Email Is Required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-floating my-2">
+      <label for="floatingPassword">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        formControlName="password"
+        placeholder="Password"
+        [ngClass]="{ 'is-invalid ': submitted && f['password'].errors }"
+      />
+
+      <div
+        *ngIf="
+          submitted &&
+          f['password'].errors &&
+          f['password'].invalid &&
+          (f['password'].dirty || f['password'].touched)
+        "
+        class="invaild-feedback"
+      >
+        <div *ngIf="f['password'].errors?.['minLength']" class="text-danger">
+          Password must be at least 6 digit
+        </div>
+        <div *ngIf="f['password'].errors?.['required']" class="text-danger">
+          Password Is Required
+        </div>
+      </div>
+    </div>
+
+    <div class="form-floating my-2">
+      <label for="confirmPassword">Confirm Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="confirmPassword"
+        formControlName="confirmPassword"
+        placeholder="Confirm Password"
+        [ngClass]="{ 'is-invalid ': submitted && f['confirmPassword'].errors }"
+      />
+
+      <div
+        *ngIf="
+          submitted &&
+          f['confirmPassword'].errors &&
+          f['confirmPassword'].invalid &&
+          (f['confirmPassword'].dirty || f['confirmPassword'].touched)
+        "
+        class="invaild-feedback"
+      >
+        <div
+          *ngIf="userForm.value.password != userForm.value.confirmPassword"
+          class="text-danger"
+        >
+          Password no matching with Confirm Password
+        </div>
+      </div>
+    </div>
+
+    <button
+      class="w-100 my-4 btn-lg btn btn-warning sign-btn"
+      type="submit"
+      id="submit"
+      [disabled]="
+        userForm.invalid ||
+        userForm.value.password != userForm.value.confirmPassword
+      "
+      (click)="sendEmail()"
+    >
+      Sign Up
+    </button>
+    <p class="mt-3 mb-3 text-muted text-center">
+      I Have Already Account <a routerLink="/login" class="sign-link">Login</a>
+    </p>
+  </div>
+</form>

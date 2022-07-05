@@ -1,0 +1,15 @@
+<div class="slider">
+  <ng-container *ngFor="let item of slider; let i = index">
+    <div class="slide" *ngIf="i == currentSlideIndex">
+      <div class="slide-bg" id="slide-bg" @slideFade>
+        <img class="slide-bg-image" [src]="item.image" alt="PET YOUR PET" />
+      </div>
+      <div class="slide-pane">
+        <h2 class="name" @slideFade>{{ item.title }}</h2>
+        <div class="desc mt-4" @slideFade>
+          {{ item.description }}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

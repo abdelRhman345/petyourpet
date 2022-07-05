@@ -1,0 +1,44 @@
+<form [formGroup]="logInForm" class="container">
+  <h1 class="h3 mb-3 fw-normal form-title">Please Log in</h1>
+
+  <div class="form-input">
+    <div class="form-floating my-2">
+      <label for="floatingInput">Email address</label>
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="floatingInput"
+        placeholder="Email"
+        [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+      />
+    </div>
+
+    <div class="form-floating my-2">
+      <label for="floatingPassword">Password</label>
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        id="floatingPassword"
+        placeholder="Password"
+        [ngClass]="{ 'is-invalid': submitted && f['password'].errors }"
+      />
+    </div>
+
+    <div class="checkbox m-3">
+      <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+    </div>
+    <button
+      class="w-100 btn-lg btn btn-warning sign-btn"
+      (click)="onSubmit()"
+      type="submit"
+    >
+      Log In
+    </button>
+    <p class="mt-5 mb-3 text-muted text-center">
+      Create New Account
+      <a routerLink="/signup" class="sign-link"> SignUp</a>
+    </p>
+  </div>
+</form>

@@ -1,0 +1,87 @@
+@import "../../../styles/colors";
+
+.contact-us {
+  padding: 12rem 6rem;
+  @media (max-width: 575.98px) {
+    padding: 12rem 2rem;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    padding: 12rem 4rem;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    padding: 12rem 4rem;
+  }
+  .contact-area {
+    .contact-header {
+      .contact-title {
+        font-family: "Baloo Chettan 2", cursive;
+        font-weight: bold;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto 6.25rem;
+        font-size: 3.5rem;
+        color: $colorSecondary;
+        @media (max-width: 575.98px) {
+          margin: 2rem 0;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          margin: 2rem 0;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          margin: 4rem 0;
+        }
+      }
+    }
+    .contact-icon {
+      width: 70px;
+      height: 70px;
+      border: 3px solid $colorSecondary;
+      border-radius: 50%;
+      @media (max-width: 575.98px) {
+        width: 50px;
+        height: 50px;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 50px;
+        height: 50px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    .contact-head {
+      font-family: "Baloo Chettan 2", cursive;
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-bottom: 0.3em;
+      line-height: 1.4;
+      @media (max-width: 575.98px) {
+        font-size: 1rem;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        font-size: 1.1rem;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        font-size: 1.2rem;
+      }
+      .contact-text {
+        font-family: "Montserrat", sans-serif;
+        margin-bottom: 1.5em;
+        color: $colorPrimary;
+        font-size: 1rem;
+        line-height: 1.4;
+        letter-spacing: 0.5px;
+        @media (max-width: 575.98px) {
+          font-size: 0.9rem;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          font-size: 0.95rem;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
