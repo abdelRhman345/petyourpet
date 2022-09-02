@@ -1,4 +1,3 @@
-import { environment as env } from './../../../environments/environment';
 import { Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
@@ -7,9 +6,10 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class AuthserivesService {
+  baseUrl: string = 'http://localhost:3000';
   constructor(private http: HttpClient) {}
 
   getUser() {
-    return this.http.get(`${env.baseUrl}/users`);
+    return this.http.get(`${this.baseUrl}/users`);
   }
 }

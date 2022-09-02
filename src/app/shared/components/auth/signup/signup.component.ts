@@ -106,7 +106,7 @@ export class SignupComponent implements OnInit {
             ],
             autotext: 'true',
             subject: 'Confirm Email',
-            html: `Please Click <a>HERE/a> to confirm your email`,
+            html: `Please Click <a>HERE</a> to confirm your email`,
           },
         },
         success: (result) => {
