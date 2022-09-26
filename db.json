@@ -16,6 +16,36 @@
     }
   ],
   "message": [
-    {}
+    {
+      "id": 1
+    },
+    {
+      "message[from_email]": "abdelrahman25797@gmail.com",
+      "message[to][0][email]": "abdelrahaaman25797@gmail.com",
+      "message[to][0][name]": "Abdelrahmanaa",
+      "message[to][0][type]": "to",
+      "message[subject]": "Confirm Email",
+      "message[html]": "Please Click <a>HERE</a> to confirm your email",
+      "id": 2
+    },
+    {
+      "message[from_email]": "abdelrahman25797@gmail.com",
+      "message[to][0][email]": "x@x.x",
+      "message[to][0][name]": "x",
+      "message[to][0][type]": "to",
+      "message[subject]": "Confirm Email",
+      "message[html]": "Please Click <a>HERE</a> to confirm your email",
+      "id": 3
+    },
+    {
+      "message[from_email]": "abdelrahman25797@gmail.com",
+      "message[to][0][email]": "s@gmail.com",
+      "message[to][0][name]": "s",
+      "message[to][0][type]": "to",
+      "message[autotext]": "true",
+      "message[subject]": "Confirm Email",
+      "message[html]": "Please Click <a>HERE</a> to confirm your email",
+      "id": 4
+    }
   ]
 }
